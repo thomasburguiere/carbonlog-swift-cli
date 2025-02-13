@@ -1,5 +1,5 @@
 {
-  "originHash" : "d493479d377061b8bb1e1705c3f0654c7d4d8800cfc490ac7a8b5698ef0170dd",
+  "originHash" : "4e90628927ffb69da1fc4960bbaae9e2154af139c8047962ccd74bbc489968ff",
   "pins" : [
     {
       "identity" : "carbonlog-swift-lib",
@@ -8,6 +8,15 @@
       "state" : {
         "branch" : "master",
         "revision" : "2e699f347597eaf755db694497550f7525480f38"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
       }
     }
   ],
