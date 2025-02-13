@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "carbonCLI",
   dependencies: [
-    .package(url: "https://github.com/thomasburguiere/carbonlog-swift-lib", branch: "feature/service-layer"),
+    .package(url: "https://github.com/thomasburguiere/carbonlog-swift-lib", branch: "master"),
     .package(url: "https://github.com/apple/swift-argument-parser", from: "1.5.0"),
   ],
   targets: [
