@@ -1,14 +1,33 @@
 import ArgumentParser
 import CarbonLogLib
+import Foundation
 
 @main
-struct CarbonCli: ParsableCommand {
+@available(macOS 12, *)
+struct CarbonCli: AsyncParsableCommand {
 
-  @Option(help: "Specify the input")
-  public var input: String
-  
-  
-  public func run() throws {
-    print("Carbon says hello to \(self.input)")
+  @Argument(
+    help: "A file containing a CSV formatted Carbon Log",
+    completion: .file(), transform: URL.init(fileURLWithPath:)
+  )
+  var inputFile: URL
+
+  @Flag(name: .shortAndLong)
+  var verbose = false
+
+  mutating func run() async throws {
+    if verbose {
+      print("processing file \(self.inputFile)")
+    }
+
+    let service = CsvPersistenceService(csvURL: self.inputFile)
+    let log = await service.load(id: "String")
+
+    if let log {
+      print("file contains \(log.measurements.count) measurement(s)\n")
+      print(log.measurements.reduce("", { $0 + $1.description + "\n" }))
+    } else {
+      throw ValidationError("could not parse log")
+    }
   }
 }

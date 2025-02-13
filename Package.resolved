@@ -1,13 +1,13 @@
 {
-  "originHash" : "4e90628927ffb69da1fc4960bbaae9e2154af139c8047962ccd74bbc489968ff",
+  "originHash" : "a4bed8d5bf3565a51404d319662e16fc15e6474292f5f03d601a770aeac8d4c8",
   "pins" : [
     {
       "identity" : "carbonlog-swift-lib",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/thomasburguiere/carbonlog-swift-lib",
       "state" : {
-        "branch" : "master",
-        "revision" : "2e699f347597eaf755db694497550f7525480f38"
+        "branch" : "feature/service-layer",
+        "revision" : "387c9ab931e099a25bdb711f099f292862b5eb3b"
       }
     },
     {
