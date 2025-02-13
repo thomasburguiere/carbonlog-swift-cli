@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:carbonCli}",
+      "name": "Debug carbonCLI",
+      "program": "${workspaceFolder:carbonCli}/.build/debug/carbonCLI",
+      "preLaunchTask": "swift: Build Debug carbonCLI"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:carbonCli}",
+      "name": "Release carbonCLI",
+      "program": "${workspaceFolder:carbonCli}/.build/release/carbonCLI",
+      "preLaunchTask": "swift: Build Release carbonCLI"
+    }
+  ]
+}
