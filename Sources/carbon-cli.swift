@@ -20,8 +20,8 @@ struct CarbonCli: AsyncParsableCommand {
       print("processing file \(self.inputFile)")
     }
 
-    let service = CsvPersistenceService(csvURL: self.inputFile)
-    let log = await service.load(id: "String")
+    let csvService = LocalFilePersistenceService(fileURL: self.inputFile, format: .CSV)
+    let log = await csvService.load(id: "String")
 
     if let log {
       print("file contains \(log.measurements.count) measurement(s)\n")
