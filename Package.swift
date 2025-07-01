@@ -7,7 +7,7 @@ let package = Package(
   name: "carbonCLI",
   dependencies: [
     .package(url: "https://github.com/thomasburguiere/carbonlog-swift-lib", from: "0.3.1"),
-    .package(url: "https://github.com/apple/swift-argument-parser", from: "1.6.0"),
+    .package(url: "https://github.com/apple/swift-argument-parser", from: "1.6.1"),
   ],
   targets: [
     // Targets are the basic building blocks of a package, defining a module or a test suite.
